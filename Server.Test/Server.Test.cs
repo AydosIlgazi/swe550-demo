@@ -17,7 +17,7 @@ public class TestsFixture : IDisposable
         new DriverManager().SetUpDriver(new FirefoxConfig());
         FirefoxOptions options = new FirefoxOptions();
         options.LogLevel = FirefoxDriverLogLevel.Fatal;
-        options.AddArgument("--headless");
+        //options.AddArgument("--headless");
 
         driver = new FirefoxDriver(options);
     }
@@ -41,21 +41,21 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void EmptyTodo()
     {
-        Percy.Snapshot(driver, "Empty Todo State");
+        //Percy.Snapshot(driver, "Empty Todo State");
     }
 
     [Fact]
     public void WithIncompleteTodo()
     {
-        
+
         driver.FindElement(By.ClassName("new-todo")).SendKeys("Try Percy" + Keys.Enter);
-        Percy.Snapshot(driver, "With a Todo");
+        //Percy.Snapshot(driver, "With a Todo");
     }
 
     [Fact]
     public void WithCompletedTodo()
     {
         driver.FindElement(By.ClassName("toggle")).Click();
-        Percy.Snapshot(driver, "Completed Todo");
+        //Percy.Snapshot(driver, "Completed Todo");
     }
 }
