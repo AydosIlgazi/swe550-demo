@@ -47,6 +47,7 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void WithIncompleteTodo()
     {
+        
         driver.FindElement(By.ClassName("new-todo")).SendKeys("Try Percy" + Keys.Enter);
         Percy.Snapshot(driver, "With a Todo");
     }
