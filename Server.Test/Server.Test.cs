@@ -41,7 +41,7 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void EmptyTodo()
     {
-        //Percy.Snapshot(driver, "Empty Todo State");
+        Percy.Snapshot(driver, "Empty Todo State");
     }
 
     [Fact]
@@ -49,13 +49,13 @@ public class ExampleTests : IClassFixture<TestsFixture>
     {
 
         driver.FindElement(By.ClassName("new-todo")).SendKeys("Try Percy" + Keys.Enter);
-        //Percy.Snapshot(driver, "With a Todo");
+        Percy.Snapshot(driver, "With a Todo");
     }
 
     [Fact]
     public void WithCompletedTodo()
     {
         driver.FindElement(By.ClassName("toggle")).Click();
-        //Percy.Snapshot(driver, "Completed Todo");
+        Percy.Snapshot(driver, "Completed Todo");
     }
 }
