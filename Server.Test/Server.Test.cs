@@ -48,8 +48,11 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void EmptyTodoWithCss()
     {
-        Percy.Snapshot(driver, "Index with Percy Css", new Dictionary<string,object> {
+        Percy.Options snapshotOptions = new Percy.Options();
+        snapshotOptions.Add("percyCSS", "#pricing {visibility: hidden;}");
+        /*Percy.Snapshot(driver, "Index with Percy Css", new Dictionary<string,object> {
             {"percyCSS", "#pricing {visibility: hidden;}"}
-        });
+        });*/
+        Percy.Snapshot(driver, "Index with Percy Css", snapshotOptions);
     }
 }
