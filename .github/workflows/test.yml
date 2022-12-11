@@ -8,6 +8,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    environment: percy
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-dotnet@v2
