@@ -49,7 +49,7 @@ public class ExampleTests : IClassFixture<TestsFixture>
     public void EmptyTodoWithCss()
     {
         Percy.Snapshot(driver, "Empty Todo State", new Dictionary<string,object> {
-            {"percyCSS", ".info {visibility: hidden;}"}
+            {"percyCSS", "#pricing {visibility: hidden;}"}
         });
     }
 }
