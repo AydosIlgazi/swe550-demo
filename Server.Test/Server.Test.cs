@@ -18,7 +18,7 @@ public class TestsFixture : IDisposable
         new DriverManager().SetUpDriver(new FirefoxConfig());
         FirefoxOptions options = new FirefoxOptions();
         options.LogLevel = FirefoxDriverLogLevel.Fatal;
-        //options.AddArgument("--headless");
+        options.AddArgument("--headless");
 
         driver = new FirefoxDriver(options);
     }
