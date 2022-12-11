@@ -42,13 +42,13 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void EmptyTodo()
     {
-        Percy.Snapshot(driver, "Empty Todo State");
+        Percy.Snapshot(driver, "Index");
     }
 
-    //[Fact]
+    [Fact]
     public void EmptyTodoWithCss()
     {
-        Percy.Snapshot(driver, "Empty Todo State", new Dictionary<string,object> {
+        Percy.Snapshot(driver, "Index with Percy Css", new Dictionary<string,object> {
             {"percyCSS", "#pricing {visibility: hidden;}"}
         });
     }
