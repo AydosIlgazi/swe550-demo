@@ -18,7 +18,7 @@ public class TestsFixture : IDisposable
         new DriverManager().SetUpDriver(new FirefoxConfig());
         FirefoxOptions options = new FirefoxOptions();
         options.LogLevel = FirefoxDriverLogLevel.Fatal;
-        //options.AddArgument("--headless");
+        options.AddArgument("--headless");
 
         driver = new FirefoxDriver(options);
     }
@@ -45,7 +45,7 @@ public class ExampleTests : IClassFixture<TestsFixture>
         Percy.Snapshot(driver, "Empty Todo State");
     }
 
-        [Fact]
+    //[Fact]
     public void EmptyTodoWithCss()
     {
         Percy.Snapshot(driver, "Empty Todo State", new Dictionary<string,object> {
