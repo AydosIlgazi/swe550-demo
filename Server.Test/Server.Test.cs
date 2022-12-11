@@ -41,7 +41,9 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void EmptyTodo()
     {
-        Percy.Snapshot(driver, "Empty Todo State");
+        Percy.Snapshot(driver, "Empty Todo State", new Dictionary<string,object> {
+            {"percyCSS", ".info {visibility: hidden;}"}
+        });
     }
 
     [Fact]
