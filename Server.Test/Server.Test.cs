@@ -53,6 +53,9 @@ public class ExampleTests : IClassFixture<TestsFixture>
         /*Percy.Snapshot(driver, "Index with Percy Css", new Dictionary<string,object> {
             {"percyCSS", "#pricing {visibility: hidden;}"}
         });*/
+        Percy.Snapshot(driver, ".NET anonymous options", new {
+            widths = new [] { 600, 1200 }
+        });
         snapshotOptions.Add("widths", "{600,1200}");
         Percy.Snapshot(driver, "Index with Percy Css", snapshotOptions);
     }
