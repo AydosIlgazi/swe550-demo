@@ -44,7 +44,6 @@ public class ExampleTests : IClassFixture<TestsFixture>
     {
         Percy.Snapshot(driver, "Index");
     }
-
     [Fact]
     public void IndexWithCss()
     {
