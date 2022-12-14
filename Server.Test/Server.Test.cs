@@ -40,17 +40,23 @@ public class ExampleTests : IClassFixture<TestsFixture>
     }
 
     [Fact]
-    public void EmptyTodo()
+    public void Index()
     {
         Percy.Snapshot(driver, "Index");
     }
-
     [Fact]
-    public void EmptyTodoWithCss()
+    public void IndexWithCss()
     {
         Percy.Options snapshotOptions = new Percy.Options();
         snapshotOptions.Add("percyCSS", "#pricing {visibility: hidden;}");
         snapshotOptions.Add("widths", new [] { 600, 1200 });
         Percy.Snapshot(driver, "Index with Percy Css", snapshotOptions);
+    }
+
+        [Fact]
+    public void InProgressAnimation()
+    {
+        driver.Navigate().GoToUrl("http://localhost:8000/inprogress.html");
+        Percy.Snapshot(driver, "InProgress Animation");
     }
 }
