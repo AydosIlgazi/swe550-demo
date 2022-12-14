@@ -42,7 +42,7 @@ public class ExampleTests : IClassFixture<TestsFixture>
     [Fact]
     public void Index()
     {
-        Percy.Snapshot(driver, "Index");
+        Percy.Snapshot(driver, "Index"); 
     }
     [Fact]
     public void IndexWithCss()
